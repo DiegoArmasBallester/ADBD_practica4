@@ -2,6 +2,9 @@
 
 Este documento resume la estructura final del modelo relacional para la gestión de Viveros Tajinaste S.A., detallando las tablas, vistas y las optimizaciones aplicadas sobre el diseño conceptual original.
 
+Para ejecutar el script use:
+`psql -h localhost -U nombre_de_usuario -d postgres`
+
 ## 1. Consultas SELECT
 **1- Consultar el stock disponible de productos por Vivero y Zona**
 
