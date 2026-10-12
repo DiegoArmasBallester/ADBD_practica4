@@ -4,13 +4,21 @@ Este documento resume la estructura final del modelo relacional para la gestión
 
 ## 1. Consultas SELECT
 1- Consultar el stock disponible de productos por Vivero y Zona
+
 Tablas implicadas: Asignacion_Producto, Producto, Vivero, Zona
+
 <img width="568" height="278" alt="image" src="https://github.com/user-attachments/assets/1ef3fe76-bfd6-4a52-9dca-d2b8412d89d1" />
+
 2- Ver el historial de puestos y productividad de los empleados
+
 Tablas implicadas: Puesto, Empleado, Zona
+
 <img width="613" height="299" alt="image" src="https://github.com/user-attachments/assets/bd36e91b-feb9-4e58-82d2-b7dd394f700f" />
+
 3- Obtener el detalle completo de los pedidos (ticket de compra)
+
 Tablas implicadas: Pedido, Registro_Pedido, Cliente, Empleado, Producto
+
 <img width="1185" height="384" alt="image" src="https://github.com/user-attachments/assets/87943cea-8c07-4014-b564-e0506a9aff63" />
 
 ## 1. Mejoras Aplicadas al Esquema Original
