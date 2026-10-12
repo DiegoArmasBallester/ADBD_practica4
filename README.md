@@ -3,37 +3,37 @@
 Este documento resume la estructura final del modelo relacional para la gestión de Viveros Tajinaste S.A., detallando las tablas, vistas y las optimizaciones aplicadas sobre el diseño conceptual original.
 
 ## 1. Consultas SELECT
-*1- Consultar el stock disponible de productos por Vivero y Zona*
+**1- Consultar el stock disponible de productos por Vivero y Zona**
 
 Tablas implicadas: Asignacion_Producto, Producto, Vivero, Zona
 
 <img width="568" height="278" alt="image" src="https://github.com/user-attachments/assets/1ef3fe76-bfd6-4a52-9dca-d2b8412d89d1" />
 
-*2- Ver el historial de puestos y productividad de los empleados*
+**2- Ver el historial de puestos y productividad de los empleados**
 
 Tablas implicadas: Puesto, Empleado, Zona
 
 <img width="613" height="299" alt="image" src="https://github.com/user-attachments/assets/bd36e91b-feb9-4e58-82d2-b7dd394f700f" />
 
-*3- Obtener el detalle completo de los pedidos (ticket de compra)*
+**3- Obtener el detalle completo de los pedidos (ticket de compra)**
 
 Tablas implicadas: Pedido, Registro_Pedido, Cliente, Empleado, Producto
 
 <img width="1185" height="384" alt="image" src="https://github.com/user-attachments/assets/87943cea-8c07-4014-b564-e0506a9aff63" />
 
-*4- Listar las tareas de mantenimiento realizadas agrupadas por Vivero*
+**4- Listar las tareas de mantenimiento realizadas agrupadas por Vivero**
 
 Tablas implicadas: Mantenimiento, Empleado, Zona, Vivero
 
 <img width="733" height="321" alt="image" src="https://github.com/user-attachments/assets/78d528c1-19ad-4f2a-8a31-ae211cf618d5" />
 
-*5- Calcular el total gastado por cada cliente en la historia*
+**5- Calcular el total gastado por cada cliente en la historia**
 
 Tablas implicadas: Cliente, Pedido, Registro_Pedido
 
 <img width="623" height="321" alt="image" src="https://github.com/user-attachments/assets/5e545c83-019b-49d0-8488-1fb0f414521a" />
 
-*6- Ver rápidamente qué clientes son "Plus" y cuántos pedidos han hecho*
+**6- Ver rápidamente qué clientes son "Plus" y cuántos pedidos han hecho**
 
 Usando exclusivamente la vista creada
 
