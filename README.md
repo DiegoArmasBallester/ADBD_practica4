@@ -2,6 +2,13 @@
 
 Este documento resume la estructura final del modelo relacional para la gestión de Viveros Tajinaste S.A., detallando las tablas, vistas y las optimizaciones aplicadas sobre el diseño conceptual original.
 
+## 1. Consultas SELECT
+<img width="568" height="278" alt="image" src="https://github.com/user-attachments/assets/1ef3fe76-bfd6-4a52-9dca-d2b8412d89d1" />
+
+<img width="613" height="299" alt="image" src="https://github.com/user-attachments/assets/bd36e91b-feb9-4e58-82d2-b7dd394f700f" />
+
+<img width="1185" height="384" alt="image" src="https://github.com/user-attachments/assets/87943cea-8c07-4014-b564-e0506a9aff63" />
+
 ## 1. Mejoras Aplicadas al Esquema Original
 
 Para asegurar la viabilidad del cálculo de facturación, mantener un histórico real de compras y cumplir con las normas de diseño relacional, se realizaron las siguientes modificaciones clave en el modelo:
