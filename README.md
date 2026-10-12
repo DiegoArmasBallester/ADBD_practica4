@@ -1,4 +1,4 @@
-# Administración y Diseño de Base de Datos - Viveros Tajinaste S.A.
+# Práctica 4. Modelo Relacional. Viveros
 
 Este documento resume la estructura final del modelo relacional para la gestión de Viveros Tajinaste S.A., detallando las tablas, vistas y las optimizaciones aplicadas sobre el diseño conceptual original.
 
@@ -20,6 +20,24 @@ Tablas implicadas: Puesto, Empleado, Zona
 Tablas implicadas: Pedido, Registro_Pedido, Cliente, Empleado, Producto
 
 <img width="1185" height="384" alt="image" src="https://github.com/user-attachments/assets/87943cea-8c07-4014-b564-e0506a9aff63" />
+
+4- Listar las tareas de mantenimiento realizadas agrupadas por Vivero
+
+Tablas implicadas: Mantenimiento, Empleado, Zona, Vivero
+
+<img width="733" height="321" alt="image" src="https://github.com/user-attachments/assets/78d528c1-19ad-4f2a-8a31-ae211cf618d5" />
+
+5- Calcular el total gastado por cada cliente en la historia
+
+Tablas implicadas: Cliente, Pedido, Registro_Pedido
+
+<img width="623" height="321" alt="image" src="https://github.com/user-attachments/assets/5e545c83-019b-49d0-8488-1fb0f414521a" />
+
+6- Ver rápidamente qué clientes son "Plus" y cuántos pedidos han hecho
+
+Usando exclusivamente la vista creada
+
+<img width="475" height="221" alt="image" src="https://github.com/user-attachments/assets/ab3945eb-277f-449d-9c59-a2d94f83a81d" />
 
 ## 1. Mejoras Aplicadas al Esquema Original
 
