@@ -1,4 +1,4 @@
-# Documentación de la Base de Datos - Viveros Tajinaste S.A.
+# Administración y Diseño de Base de Datos - Viveros Tajinaste S.A.
 
 Este documento resume la estructura final del modelo relacional para la gestión de Viveros Tajinaste S.A., detallando las tablas, vistas y las optimizaciones aplicadas sobre el diseño conceptual original.
 
