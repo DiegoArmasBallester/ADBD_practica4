@@ -3,6 +3,8 @@
 Este documento resume la estructura final del modelo relacional para la gestión de Viveros Tajinaste S.A., detallando las tablas, vistas y las optimizaciones aplicadas sobre el diseño conceptual original.
 
 ## 1. Consultas SELECT
+1. Consultar el stock disponible de productos por Vivero y Zona
+Tablas implicadas: Asignacion_Producto, Producto, Vivero, Zona
 <img width="568" height="278" alt="image" src="https://github.com/user-attachments/assets/1ef3fe76-bfd6-4a52-9dca-d2b8412d89d1" />
 
 <img width="613" height="299" alt="image" src="https://github.com/user-attachments/assets/bd36e91b-feb9-4e58-82d2-b7dd394f700f" />
