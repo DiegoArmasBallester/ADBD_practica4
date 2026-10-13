@@ -11,37 +11,37 @@ Para ejecutar el script use:
 
 Tablas implicadas: Asignacion_Producto, Producto, Vivero, Zona
 
-<img width="568" height="278" alt="image" src="https://github.com/user-attachments/assets/1ef3fe76-bfd6-4a52-9dca-d2b8412d89d1" />
+<img width="716" height="355" alt="image" src="https://github.com/user-attachments/assets/dcd28b8a-547b-4b07-b482-7264ccd2aed7" />
 
 **2- Ver el historial de puestos y productividad de los empleados**
 
 Tablas implicadas: Puesto, Empleado, Zona
 
-<img width="613" height="299" alt="image" src="https://github.com/user-attachments/assets/bd36e91b-feb9-4e58-82d2-b7dd394f700f" />
+<img width="1351" height="427" alt="image" src="https://github.com/user-attachments/assets/2e029839-b646-4ece-9f0f-044a4033ffe7" />
 
 **3- Obtener el detalle completo de los pedidos (ticket de compra)**
 
 Tablas implicadas: Pedido, Registro_Pedido, Cliente, Empleado, Producto
 
-<img width="1185" height="384" alt="image" src="https://github.com/user-attachments/assets/87943cea-8c07-4014-b564-e0506a9aff63" />
+<img width="1257" height="493" alt="image" src="https://github.com/user-attachments/assets/c46e7f97-1481-4442-a9c7-f1beec416ed4" />
 
 **4- Listar las tareas de mantenimiento realizadas agrupadas por Vivero**
 
 Tablas implicadas: Mantenimiento, Empleado, Zona, Vivero
 
-<img width="733" height="321" alt="image" src="https://github.com/user-attachments/assets/78d528c1-19ad-4f2a-8a31-ae211cf618d5" />
+<img width="530" height="313" alt="image" src="https://github.com/user-attachments/assets/7c7e8d6c-bc4b-4052-96fd-ab1fdf74636b" />
 
 **5- Calcular el total gastado por cada cliente en la historia**
 
 Tablas implicadas: Cliente, Pedido, Registro_Pedido
 
-<img width="623" height="321" alt="image" src="https://github.com/user-attachments/assets/5e545c83-019b-49d0-8488-1fb0f414521a" />
+<img width="613" height="361" alt="image" src="https://github.com/user-attachments/assets/8f4cfa42-faa5-4044-ba48-bd8379d6d731" />
 
 **6- Ver rápidamente qué clientes son "Plus" y cuántos pedidos han hecho**
 
 Usando exclusivamente la vista creada
 
-<img width="475" height="221" alt="image" src="https://github.com/user-attachments/assets/ab3945eb-277f-449d-9c59-a2d94f83a81d" />
+<img width="552" height="265" alt="image" src="https://github.com/user-attachments/assets/1e4ec292-f69a-4647-bea3-1fbf81108523" />
 
 ## 1. Mejoras Aplicadas al Esquema Original
 
