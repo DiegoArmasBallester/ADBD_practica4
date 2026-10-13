@@ -64,6 +64,7 @@ Para asegurar la viabilidad del cálculo de facturación, mantener un histórico
 ### Entidades Dependientes
 *   **`Zona` (Entidad Débil)**: Diferentes áreas dentro de las sucursales (Exterior, Almacén, etc.). Su existencia está atada a un `Vivero` (borrado en cascada).
 *   **`Pedido`**: Cabecera de los tickets de compra. Contiene la fecha de la venta y se enlaza directamente con el `Cliente` que compra y el `Empleado` que gestiona la transacción.
+*   **`Tarea`**: Registro de las tareas que pueden realizar los empleados, junto con una pequeña descripción de esta.
 
 ### Tablas Intermedias (Relaciones N:M)
 *   **`Puesto`**: Historial laboral. Registra la ubicación (Zona y Vivero) donde trabaja un empleado en rangos de fechas definidos, junto con su productividad.
