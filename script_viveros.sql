@@ -50,6 +50,12 @@ CREATE TABLE Pedido (
     FOREIGN KEY (id_empleado) REFERENCES Empleado(id_empleado) ON DELETE RESTRICT
 );
 
+CREATE TABLE Tarea (
+    id_tarea SERIAL PRIMARY KEY,
+    nombre VARCHAR(50) NOT NULL,
+    descripcion TEXT
+);
+
 -- 3. Creación de las tablas de las relaciones
 
 CREATE TABLE Puesto (
@@ -83,19 +89,6 @@ CREATE TABLE Registro_Pedido (
     PRIMARY KEY (id_pedido, id_producto),
     FOREIGN KEY (id_pedido) REFERENCES Pedido(id_pedido) ON DELETE CASCADE,
     FOREIGN KEY (id_producto) REFERENCES Producto(id_producto) ON DELETE RESTRICT
-);
-
-CREATE TABLE Mantenimiento (
-    id_empleado INT,
-    id_vivero INT,
-    id_zona VARCHAR(20),
-    fecha DATE NOT NULL,
-    tipo VARCHAR(50) NOT NULL,
-    descripcion TEXT,
-    duracion_horas NUMERIC(4, 2) CHECK (duracion_horas > 0),
-    PRIMARY KEY (id_empleado, id_vivero, id_zona, fecha),
-    FOREIGN KEY (id_empleado) REFERENCES Empleado(id_empleado) ON DELETE CASCADE,
-    FOREIGN KEY (id_vivero, id_zona) REFERENCES Zona(id_vivero, id_zona) ON DELETE CASCADE
 );
 
 -- 4. Vista para num_pedidos
@@ -155,12 +148,19 @@ INSERT INTO Pedido (id_cliente, id_empleado, fecha_pedido) VALUES
 (1, 3, '2023-10-10 14:20:00'),
 (4, 4, '2023-10-12 16:45:00');
 
-INSERT INTO Puesto (id_empleado, id_vivero, id_zona, fecha_inicio, fecha_final, productividad) VALUES
-(1, 1, 'Z-EXT', '2023-01-01', NULL, 95.5),
-(2, 1, 'Z-ALM', '2023-01-01', '2023-06-30', 88.0),
-(2, 2, 'Z-INT', '2023-07-01', NULL, 92.0),
-(3, 3, 'Z-DEC', '2022-05-15', NULL, 85.5),
-(4, 2, 'Z-EXT', '2023-03-10', NULL, 90.0);
+INSERT INTO Tarea (nombre, descripcion) VALUES
+('Limpieza y Poda', 'Limpieza general de instalaciones y poda estacional de plantas'),
+('Gestión de Almacén', 'Control de stock, inventario y organización de mercancía'),
+('Mantenimiento', 'Reparación de infraestructuras, estanterías y sistemas de agua'),
+('Riego y Abono', 'Aplicación de riego general y fertilización de zonas verdes'),
+('Atención al Público', 'Asistencia a clientes en zonas de decoración y exterior');
+
+INSERT INTO Puesto (id_empleado, id_vivero, id_zona, fecha_inicio, fecha_final, productividad, id_tarea) VALUES
+(1, 1, 'Z-EXT', '2023-01-01', NULL, 95.5, 1),
+(2, 1, 'Z-ALM', '2023-01-01', '2023-06-30', 88.0, 2),
+(2, 2, 'Z-INT', '2023-07-01', NULL, 92.0, 4),
+(3, 3, 'Z-DEC', '2022-05-15', NULL, 85.5, 3),
+(4, 2, 'Z-EXT', '2023-03-10', NULL, 90.0, 5);
 
 INSERT INTO Asignacion_Producto (id_producto, id_vivero, id_zona, stock) VALUES
 (1, 1, 'Z-EXT', 50),
@@ -176,14 +176,7 @@ INSERT INTO Registro_Pedido (id_pedido, id_producto, cantidad, precio_venta) VAL
 (3, 4, 1, 5.75),
 (4, 2, 20, 8.99);
 
-INSERT INTO Mantenimiento (id_vivero, id_zona, id_empleado, fecha, tipo, descripcion, duracion_horas) VALUES
-(1, 'Z-EXT', 1, '2023-10-01', 'Limpieza', 'Limpieza de hojas secas', 2.5),
-(1, 'Z-ALM', 2, '2023-05-10', 'Inventario', 'Revisión y orden de stock', 4.0),
-(3, 'Z-DEC', 3, '2023-10-15', 'Reparación', 'Arreglo estantería', 1.5),
-(2, 'Z-EXT', 4, '2023-10-20', 'Riego', 'Riego general', 3.0),
-(1, 'Z-EXT', 1, '2023-10-25', 'Poda', 'Poda de rosales', 2.0);
-
--- 5. Ejemplos de DELETE
+-- 6. Ejemplos de DELETE
 
 -- Ejemplo 1: Borrar un Vivero (Demostración de CASCADE)
 DELETE FROM Vivero WHERE id_vivero = 1;
