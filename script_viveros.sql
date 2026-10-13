@@ -65,9 +65,11 @@ CREATE TABLE Puesto (
     fecha_inicio DATE NOT NULL,
     fecha_final DATE,
     productividad NUMERIC(5, 2) CHECK (productividad >= 0 AND productividad <= 100),
+    id_tarea INT NOT NULL, -- Vincula el puesto con una tarea predefinida
     PRIMARY KEY (id_empleado, id_vivero, id_zona, fecha_inicio),
     FOREIGN KEY (id_empleado) REFERENCES Empleado(id_empleado) ON DELETE CASCADE,
     FOREIGN KEY (id_vivero, id_zona) REFERENCES Zona(id_vivero, id_zona) ON DELETE CASCADE,
+    FOREIGN KEY (id_tarea) REFERENCES Tarea(id_tarea) ON DELETE RESTRICT,
     CHECK (fecha_final IS NULL OR fecha_final >= fecha_inicio)
 );
 
