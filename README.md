@@ -7,33 +7,33 @@ Para ejecutar el script use:
 `psql -h localhost -U nombre_de_usuario -d postgres -f script_viveros.sql`
 
 ## 1. Consultas SELECT
-**1- Consultar el stock disponible de productos por Vivero y Zona**
+**1. Consultar el stock disponible y la ubicación exacta de cada producto**
 
 Tablas implicadas: Asignacion_Producto, Producto, Vivero, Zona
 
 <img width="716" height="355" alt="image" src="https://github.com/user-attachments/assets/dcd28b8a-547b-4b07-b482-7264ccd2aed7" />
 
-**2- Ver el historial de puestos y productividad de los empleados**
+**2. Ver las asignaciones actuales de empleados y la tarea predefinida que realizan**
 
-Tablas implicadas: Puesto, Empleado, Zona
+Tablas implicadas: Puesto, Empleado, Zona, Tarea
 
 <img width="1351" height="427" alt="image" src="https://github.com/user-attachments/assets/2e029839-b646-4ece-9f0f-044a4033ffe7" />
 
-**3- Obtener el detalle completo de los pedidos (ticket de compra)**
+**3. Desglose completo de los tickets de compra (Pedidos)**
 
 Tablas implicadas: Pedido, Registro_Pedido, Cliente, Empleado, Producto
 
 <img width="1257" height="493" alt="image" src="https://github.com/user-attachments/assets/c46e7f97-1481-4442-a9c7-f1beec416ed4" />
 
-**4- Listar las tareas de mantenimiento realizadas agrupadas por Vivero**
+**4. Calcular el total de ingresos y unidades vendidas por categoría de producto**
 
-Tablas implicadas: Mantenimiento, Empleado, Zona, Vivero
+Tablas implicadas: Producto, Registro_Pedido
 
 <img width="530" height="313" alt="image" src="https://github.com/user-attachments/assets/7c7e8d6c-bc4b-4052-96fd-ab1fdf74636b" />
 
-**5- Calcular el total gastado por cada cliente en la historia**
+**5. Analizar qué tareas son las más asignadas y la productividad media en ellas**
 
-Tablas implicadas: Cliente, Pedido, Registro_Pedido
+Tablas implicadas: Tarea, Puesto
 
 <img width="613" height="361" alt="image" src="https://github.com/user-attachments/assets/8f4cfa42-faa5-4044-ba48-bd8379d6d731" />
 
